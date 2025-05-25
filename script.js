@@ -57,6 +57,8 @@ function animateExplosion(x, y, dx, dy) {
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  columns = Math.floor(canvas.width / fontSize);
+  drops = Array.from({ length: columns }).fill(1);
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
